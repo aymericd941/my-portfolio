@@ -27,9 +27,9 @@ const SKILLS = [
 ];
   
 
-// ── Fiche employé complète (HR FILE) ────────────────────────────────────────
+
 const HRFile = ({ onClose }) => {
-  const [tab, setTab] = useState('profile'); // 'profile' | 'contact' | 'cv'
+  const [tab, setTab] = useState('profile'); 
 
   return (
     <ModalOverlay close={onClose}>
@@ -40,15 +40,13 @@ const HRFile = ({ onClose }) => {
         exit={{ scale: 0.85, opacity: 0 }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* En-tête dossier */}
         <div className="hr-file__header">
           <div className="hr-file__stamp">CONFIDENTIAL</div>
           <h2 className="hr-file__title">EMPLOYEE FILE</h2>
-          {/* <p className="hr-file__subtitle">Dunder Mifflin Paper Company, Inc.</p> */}
+
           <button className="close-x hr-close" onClick={onClose}>×</button>
         </div>
 
-        {/* Onglets */}
         <div className="hr-tabs">
           {[
             { id: 'profile', label: '👤 Profile' },
@@ -64,7 +62,6 @@ const HRFile = ({ onClose }) => {
           ))}
         </div>
 
-        {/* Contenu */}
         <div className="hr-body">
           <AnimatePresence mode="wait">
             {tab === 'profile' && (
@@ -76,7 +73,7 @@ const HRFile = ({ onClose }) => {
                 exit={{ opacity: 0, x: 10 }}
               >
                 <div className="profile-layout">
-                  {/* Photo */}
+
                   <div className="photo-wrapper">
                    
                     <div className="photo-wrapper">
@@ -86,7 +83,6 @@ const HRFile = ({ onClose }) => {
         
                   </div>
 
-                  {/* Infos */}
                   <div className="profile-info">
                     <div className="dundie-header" style={{ marginBottom: '10px' }}>🏆 DUNDIE WINNER</div>
                     <h3 className="employee-name">AYMERIC DEROUDILHE</h3>
@@ -171,7 +167,7 @@ const HRFile = ({ onClose }) => {
                   <div className="cv-warning">
                     ⚠️ Toby from HR has approved this document.
                   </div>
-                  {/* Remplace le href par le chemin de ton CV */}
+
                   <a
                     href='/cv-aymeric.pdf'
                     download="CV_Aymeric_Deroudilhe.pdf"
@@ -193,7 +189,7 @@ const HRFile = ({ onClose }) => {
 
 export default function MyApp() {
   const [projetSelectionne, setProjetSelectionne] = useState(null);
-  const [showHRFile, setShowHRFile] = useState(false);   // ← remplace showProfil
+  const [showHRFile, setShowHRFile] = useState(false);   
   const [showSkills, setShowSkills] = useState(false);
   const [isDwightMode, setIsDwightMode] = useState(false);
   const [buffer, setBuffer] = useState('');

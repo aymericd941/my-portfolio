@@ -1,6 +1,5 @@
-/* --- CONFIGURATION GLOBALE DUNDER MIFFLIN --- */
 @font-face {
-  font-family: "Neon"; /* On garde ta font si tu l'aimes, sinon Courier est très "Office" */
+  font-family: "Neon"; 
   src: url("./assets/font/Neon.ttf") format("truetype");
 }
 
@@ -15,22 +14,21 @@ body {
 
 .office-layout {
   position: relative;
-  min-height: 160vh; /* Force une grande longueur pour le scroll */
+  min-height: 160vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 200px; /* Espace de respiration en fin de page */
+  padding-bottom: 200px; 
   background-image: linear-gradient(rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), 
                     url('https://www.transparenttextures.com/patterns/office.png');
 }
 
-/* --- TOP BAR CORPORATE --- */
 .top-bar {
   width: 100%;
-  background: #003a70; /* Bleu Dunder Mifflin */
+  background: #003a70;
   color: white;
   padding: 15px 40px;
-  position: fixed; /* Reste en haut pendant le scroll */
+  position: fixed; 
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -51,7 +49,7 @@ body {
   font-size: 12px;
 }
 
-/* --- MENU DÉROULANT --- */
+
 .menu-container { position: relative; }
 
 .menu-trigger {
@@ -87,14 +85,14 @@ body {
 
 .dropdown-item:hover { background: #f4f4f4; padding-left: 20px; color: #003a70; }
 
-/* --- SECTION HERO (Identité visuelle) --- */
+
 .hero-section {
   text-align: center;
-  margin: 180px 0 100px 0; /* Énorme marge pour étaler le contenu */
+  margin: 180px 0 100px 0;  
 }
 
 .dunder-logo {
-  font-size: clamp(60px, 15vw, 130px); /* Logo massif */
+  font-size: clamp(60px, 15vw, 130px); 
   font-weight: 900;
   color: #003a70;
   margin: 0;
@@ -116,18 +114,18 @@ body {
   color: #666;
   margin-top: 60px;
   
-  /* --- LE CENTRAGE MAGIQUE --- */
+  
   max-width: 800px;
-  margin-left: auto;   /* Pousse depuis la gauche */
-  margin-right: auto;  /* Pousse depuis la droite */
-  text-align: center;  /* Centre le texte à l'intérieur du bloc */
+  margin-left: auto;   
+  margin-right: auto;  
+  text-align: center;  
 }
 
-/* --- NAVIGATION & ACCÈS RAPIDE --- */
+
 .quick-access {
   display: flex;
   gap: 50px;
-  margin-bottom: 150px; /* Espace de transition vers les dossiers */
+  margin-bottom: 150px; 
 }
 
 .office-btn {
@@ -154,11 +152,11 @@ body {
   box-shadow: 6px 6px 0px #ccc;
 }
 
-/* --- GRILLE DES PROJETS (Archives) --- */
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Dossiers plus larges */
-  gap: 80px; /* Plus d'espace entre chaque projet */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 80px; 
   width: 90%;
   max-width: 1300px;
 }
@@ -178,8 +176,8 @@ body {
 }
 
 .folder-interior {
-  background: #f1dca7; /* Couleur dossier beige culte */
-  height: 200px; /* Plus de hauteur */
+  background: #f1dca7; 
+  height: 200px; 
   border: 2px solid #c9ae78;
   display: flex;
   align-items: center;
@@ -201,7 +199,7 @@ body {
   padding: 20px;
 }
 
-/* --- MODALS & OVERLAYS --- */
+
 .overlay {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -214,7 +212,7 @@ body {
 }
 
 .post-it {
-  background: #fffb8f; /* Jaune Post-it */
+  background: #fffb8f; 
   padding: 50px;
   width: 350px;
   box-shadow: 15px 15px 0px rgba(0,0,0,0.2);
@@ -241,38 +239,37 @@ body {
   border: 2px solid #b8860b;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 768px) {
   .hero-section { margin-top: 120px; }
   .dunder-logo { font-size: 50px; }
   .quick-access { flex-direction: column; width: 90%; gap: 20px; }
   .projects-grid { grid-template-columns: 1fr; }
   .top-bar { padding: 10px 15px; }
-  .status-badge { display: none; } /* On cache le texte long sur mobile */
+  .status-badge { display: none; } 
 }
 
 .corner-dundie {
-  position: absolute;   /* Suit le mouvement du scroll */
+  position: absolute;   
+
   
-  /* POSITIONNEMENT PRÉCIS */
-  /* Ajuste ce chiffre selon la hauteur réelle de ta barre bleue */
-  top: 65px;            /* Si 65px c'est trop haut, essaie 70px ou 75px */
+  top: 65px;            
   right: 40px;          
   
-  /* TAILLE */
+  
   width: 200px;      
   height: auto;      
   
-  /* PROFONDEUR */
+  
   z-index: 10;
   
-  /* STYLE */
+  
   filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
 }
 
-/* Style du Dossier en mode Vol d'Identité */
+
 .identity-theft-mode {
-  border: 5px solid #cc0000 !important; /* Rouge alerte */
+  border: 5px solid #cc0000 !important; 
   background-color: #fff5f5 !important;
   box-shadow: 0 0 20px rgba(204, 0, 0, 0.5) !important;
 }
@@ -294,7 +291,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Petit effet de glitch sur le nom */
+
 .glitch-text {
   animation: glitch 0.3s infinite;
   color: #cc0000;
@@ -354,7 +351,7 @@ body {
 
 .inspired-footer {
   position: absolute;
-  bottom: 20px; /* Distance du bas de l'écran */
+  bottom: 20px; 
   color: white
   /* font-family: 'Arial', sans-serif; */
   /* font-size: 0.9rem; */
@@ -366,11 +363,7 @@ margin: 10px;
 
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   HR FILE — à ajouter dans ton App.css
-   ═══════════════════════════════════════════════════════════════ */
 
-/* Conteneur principal du dossier HR */
 .hr-file {
   background: #fdf6e3;
   border: 2px solid #c8a96e;
@@ -385,7 +378,7 @@ margin: 10px;
   font-family: 'Courier New', monospace;
 }
 
-/* En-tête */
+
 .hr-file__header {
   background: #2c3e50;
   color: #fdf6e3;
@@ -434,7 +427,7 @@ margin: 10px;
   font-size: 1.4rem !important;
 }
 
-/* Onglets */
+
 .hr-tabs {
   display: flex;
   background: #2c3e50;
@@ -464,7 +457,7 @@ margin: 10px;
   border-bottom-color: #fdf6e3;
 }
 
-/* Corps scrollable */
+
 .hr-body {
   overflow-y: auto;
   flex: 1;
@@ -474,16 +467,16 @@ margin: 10px;
   padding: 22px;
 }
 
-/* ── ONGLET PROFILE ────────────────────────────────────────────── */
+
 .profile-layout {
   display: flex;
-  flex-direction: row;  /* ← ajoute ça */
+  flex-direction: row; 
   align-items: center;
 
   
 }
 
-/* Photo */
+
 .photo-wrapper {
   display: flex;
   flex-direction: column;
@@ -518,7 +511,7 @@ margin: 10px;
   letter-spacing: 1px;
 }
 
-/* Infos profil */
+
 .profile-info { flex: 1; }
 .employee-name {
   font-size: 1.25rem;
@@ -561,7 +554,7 @@ margin: 10px;
   font-style: italic;
 }
 
-/* ── ONGLET CONTACT — MÉMO ────────────────────────────────────── */
+
 .memo-form { display: flex; flex-direction: column; gap: 10px; }
 .memo-header-strip {
   background: #2c3e50;
@@ -629,7 +622,7 @@ margin: 10px;
 }
 .memo-sent-sub { font-size: 0.8rem; color: #8b7355; font-style: italic; }
 
-/* ── ONGLET CV ────────────────────────────────────────────────── */
+
 .cv-panel { display: flex; justify-content: center; }
 .cv-preview {
   display: flex;
@@ -700,7 +693,7 @@ margin: 10px;
   color: black;
 
 } */
-/* ── Responsive ──────────────────────────────────────────────── */
+
 @media (max-width: 560px) {
   .profile-layout { flex-direction: column; align-items: center; }
   .photo-placeholder, .employee-photo { width: 100px; height: 125px; }

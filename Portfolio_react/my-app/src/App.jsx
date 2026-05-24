@@ -7,11 +7,15 @@ import MyButton from './button';
 
 
 const PROJETS = [
-  { id: 'etodo', titre: "E-TODO", texte: "Création d'une application de Todo list par groupe." },
-  { id: 'prison', titre: "", texte: "" },
-  { id: 'wuphf', titre: "", texte: "" },
-  { id: 'midnite', titre: "", texte: "" },
-  { id: 'beet', titre: "", texte: "" },
+  { id: 'Etodo', titre: "E-TODO", texte: "Création d'une application de Todo list en groupe de 3. " },
+  { id: 'hack & juice', titre: "Hack and Juice", texte: "Trouver et exploiter les failles sur unsite web peu sécurisé, gagner le plus de points possible en faisant les challenges et monter au classement." },
+  { id: 'yowl', titre: "Yowl", texte: "Innovation d'une application mobile uniquement avec des maquettes et uine strfatégie marketing." },
+  { id: 'Tardis', titre: "Tardis", texte: "Durant ce projet de groupe nous avons dû en utilisant des données (fichiers CSV) , créer un modèle de prediction en utilisant le machine learning." },
+  { id: 'Nextbuy', titre: "Nextbuy", texte: "Dans ce projet nous devions faire des prédictions pour un magasin en untilisant les données (fichiers CSV) comme pouir le projet Tardis." },
+  { id: 'alice', titre: "Alice in Wonderland", texte: "Ce projet avait pour but de pouvoir selectionner un livre dans une grande banque de livre et de créer des fonctionnalites qui donnent des informations sur ce dernier, par exemple en faire un résumé ou donner d’autres livres similaires etc..." },
+  { id: 'eliza', titre: "Eliza", texte: "Pendant ce projet nous avons dû créer un chatbot (telegram) en entrainant un modèle IA. Nous avons lié notre bot au modèle IA d'Ollama, l'idée derrière ce projet était d'aider à améliorer la vie étudiante." },
+  {id: 'job', titre: "Job aggregator", texte: "Ce projet de fin d'année a pour but la création d'un site d'annonces d'emploi entier (back, front, cybersécurité, data/IA...)"}
+
 ];
 
 const SKILLS = [
@@ -156,7 +160,7 @@ const HRFile = ({ onClose }) => {
                 <div className="cv-preview">
                   <div className="cv-icon">📋</div>
                   <h3 className="cv-title">CURRICULUM VITAE</h3>
-                  <p className="cv-sub">Official Dunder Mifflin Employee Résumé</p>
+                  <p className="cv-sub">Official Epitech student</p>
                   <div className="cv-meta">
                     <span>Aymeric Deroudilhe</span>
                     <span>•</span>
@@ -293,7 +297,7 @@ export default function MyApp() {
             whileTap={{ scale: 0.9 }}
             onClick={() => setProjetSelectionne(projet)}
           >
-            <div className='folder-tab'>Projet_{projet.id}</div>
+            <div className='folder-tab'>Projet</div>
             <div className='folder-interior'>
               <h3 className='folder-label'>{projet.titre}</h3>
             </div>

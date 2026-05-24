@@ -77,7 +77,7 @@ const HRFile = ({ onClose }) => {
                   <div className="photo-wrapper">
                    
                     <div className="photo-wrapper">
-                      <img src='/photo-aymeric.png' alt="Aymeric" className="employee-photo" />
+                      <img src='/photo-aymeric.jpg' alt="Aymeric" className="employee-photo" />
                       <div className="photo-badge">EMPLOYEE ID: #001</div>
                     </div>
         

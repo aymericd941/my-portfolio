@@ -191,7 +191,6 @@ export default function MyApp() {
   const [projetSelectionne, setProjetSelectionne] = useState(null);
   const [showHRFile, setShowHRFile] = useState(false);   
   const [showSkills, setShowSkills] = useState(false);
-  const [isDwightMode, setIsDwightMode] = useState(false);
   const [buffer, setBuffer] = useState('');
   const [isAuthorized, setIsAuthorized] = useState(false);
   const [userName, setUserName] = useState('');
@@ -202,7 +201,6 @@ export default function MyApp() {
       const newBuffer = (buffer + e.key.toLowerCase()).slice(-6);
       setBuffer(newBuffer);
       if (newBuffer === 'dwight') {
-        setIsDwightMode(true);
         setShowHRFile(true);
       }
     };
@@ -216,7 +214,6 @@ export default function MyApp() {
       setIsAuthorized(true);
     } else {
       setAccessDenied(true);
-      setIsDwightMode(true);
     }
   };
 
@@ -247,7 +244,7 @@ export default function MyApp() {
             <div className="dwight-rant">
               <p className="warning-text">IDENTITY THEFT IS NOT A JOKE, {userName.toUpperCase()}!</p>
               <p className="sub-warning">Millions of families suffer every year!</p>
-              <button className="btn-close-dark" onClick={() => { setAccessDenied(false); setIsDwightMode(false); setUserName(''); }}>
+              <button className="btn-close-dark" onClick={() => { setAccessDenied(false); setUserName(''); }}>
                 Try again, Jim.
               </button>
               <button className="btn-close-dark" onClick={() => { setIsAuthorized(true); }}>
